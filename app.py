@@ -145,20 +145,7 @@ def buscar():
         funcionarios = db.session.query(Datos_personales).filter_by(ci=ci).all()
         institucionales= db.session.query(Datos_institucionales).filter_by(ci=ci).all()
 
-        for i in institucionales:
-            i.ci= ""
-
-
-        general = funcionarios + institucionales
-        print("######################")
-        print(funcionarios)
-        print("######################")
-        print(institucionales)
-        print("######################")
-        print(general)
-         # Devolvemos una vista con los resultados de la búsqueda
-
-        return render_template("resultados_busqueda.html", general=general)
+        return render_template("resultados_busqueda.html", funcionarios=funcionarios, institucionales=institucionales)
 
 @app.route('/eliminar_datos', methods=["GET", "POST"])
 def eliminar_datos():

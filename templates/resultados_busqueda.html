@@ -178,12 +178,12 @@
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 bg-white">
-                    {%for funcionario in general%}
+                    {%for funcionario in funcionarios%}
                   <tr>
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-md font-medium text-gray-900 sm:pl-0">{{funcionario.nombre}}</td>
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-md font-medium text-gray-900 sm:pl-0">{{funcionario.apellido}}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.ci}}</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.nombre}}</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.email}}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.fecha_nacimiento}}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.telefono}}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.direccion}}</td>
@@ -191,7 +191,7 @@
                       <a href="#" class="flex justify-end text-indigo-600 hover:text-indigo-900">Editar<span class="sr-only">, Juan Pérez</span></a>
                     </td>
                   </tr>
-
+                    {%endfor%}
                   <tr class="mt-12">
                     <th scope="col" class="py-3 pl-4 pr-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 sm:pl-0">Fecha de ingreso</th>
                     <th scope="col" class="py-3 pl-4 pr-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 sm:pl-0">Cargo</th>
@@ -204,10 +204,11 @@
                   </tr>
 
                   <tr>
+                    {% for funcionario in institucionales %}
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-md font-medium text-gray-900 sm:pl-0">{{funcionario.fecha_ingreso}}</td>
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-md font-medium text-gray-900 sm:pl-0">{{funcionario.cargo}}</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.ci}}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.piso_departamento}}</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.nro_interno}}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.correo_institucional}}</td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-md font-medium sm:pr-0">
                       <a href="#" class="flex justify-end text-indigo-600 hover:text-indigo-900">Editar<span class="sr-only">, Juan Pérez</span></a>
