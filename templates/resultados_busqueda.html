@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/static/logo-solo.png" type="image/x-icon">
+    <link rel="icon" href="./../static/img/logo-solo.png" type="image/x-icon">
     <title>Modificar datos</title>
 </head>
 <body>
@@ -16,14 +16,14 @@
                 <div class="flex h-20 items-center justify-between">
                   <div class="flex items-center">
                     <div class="mr-4 flex-shrink-0">
-                      <img class="h-12 w-auto" src="/static/logo-red.png" alt="Logo Red Penitenciaria PNG">
+                      <img class="h-12 w-auto" src="./../static/img/logo-red.png" alt="Logo Red Penitenciaria PNG">
                     </div>
                     <div class="hidden md:block">
                       <div class="justify-center ml-24 flex items-baseline space-x-4">
                         <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
-                        <a href="#" class="text-white hover:bg-[#1F5C93] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Inicio</a>
+                        <a href="{{url_for('index')}}" class="text-white hover:bg-[#1F5C93] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Inicio</a>
           
-                        <a href="#" class="text-white hover:bg-[#1F5C93] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Perfil</a>
+                        <a href="{{url_for('perfil_talentos_humanos')}}" class="text-white hover:bg-[#1F5C93] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Perfil</a>
           
                         <a href="#" class="text-white hover:bg-indigo-500 hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Solicitudes</a>
           
@@ -124,11 +124,11 @@
               <div class="border-b border-gray-200">
                 <nav class="justify-center -mb-px flex" aria-label="Tabs">
                   <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                  <a href="#" class="border-transparent text-gray-500 hover:border-[#1F5C93] hover:text-[#1F5C93] w-1/4 border-b-2 py-4 px-1 text-center text-md font-medium">Cargar datos</a>
+                  <a href="{{url_for('cargar_datos')}}" class="border-transparent text-gray-500 hover:border-[#1F5C93] hover:text-[#1F5C93] w-1/4 border-b-2 py-4 px-1 text-center text-md font-medium">Cargar datos</a>
           
-                  <a href="#" class="border-transparent text-gray-500 hover:border-[#1F5C93] hover:text-[#1F5C93] w-1/4 border-b-2 py-4 px-1 text-center text-md font-medium">Modificar datos</a>
+                  <a href="{{url_for('modificar_datos')}}" class="border-transparent text-gray-500 hover:border-[#1F5C93] hover:text-[#1F5C93] w-1/4 border-b-2 py-4 px-1 text-center text-md font-medium">Modificar datos</a>
           
-                  <a href="#" class="border-transparent text-gray-500 hover:border-[#1F5C93] hover:text-[#1F5C93] w-1/4 border-b-2 py-4 px-1 text-center text-md font-medium" aria-current="page">Eliminar datos</a>
+                  <a href="{{url_for('eliminar_datos')}}" class="border-transparent text-gray-500 hover:border-[#1F5C93] hover:text-[#1F5C93] w-1/4 border-b-2 py-4 px-1 text-center text-md font-medium" aria-current="page">Eliminar datos</a>
                 </nav>
               </div>
             </div>
@@ -211,7 +211,7 @@
                     <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.nro_interno}}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-md text-gray-500">{{funcionario.correo_institucional}}</td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-md font-medium sm:pr-0">
-                      <a href="#" class="flex justify-end text-indigo-600 hover:text-indigo-900">Editar<span class="sr-only">, Juan Pérez</span></a>
+                      <!-- <a href="#" class="flex justify-end text-indigo-600 hover:text-indigo-900">Editar<span class="sr-only">, Juan Pérez</span></a> -->
                     </td>
                   </tr>
                     {%endfor%}
