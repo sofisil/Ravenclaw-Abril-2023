@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="./../static/imagenes/logo-solo.png" type="image/x-icon">
+    <link rel="icon" href="./../static/img/logo-solo.png" type="image/x-icon">
     <title>Solicitudes - Talento Humano</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
                 <div class="flex h-20 items-center justify-between">
                   <div class="flex items-center">
                     <div class="mr-4 flex-shrink-0">
-                      <img class="h-12 w-auto" src="./../static/imagenes/logo-red.png" alt="Logo Red Penitenciaria PNG">
+                      <img class="h-12 w-auto" src="./../static/img/logo-red.png" alt="Logo Red Penitenciaria PNG">
                     </div>
                     <div class="hidden md:block">
                       <div class="justify-center ml-24 flex items-baseline space-x-4">
@@ -26,9 +26,9 @@
           
                         <a href="#" class="text-white hover:bg-[#3193E8] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Perfil</a>
           
-                        <a href="#" class="text-white hover:bg-[#3193E8] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Solicitudes</a>
+                        <a href="{{url_for('solicitudes_talentos_humanos')}}" class="text-white hover:bg-[#3193E8] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Solicitudes</a>
           
-                        <a href="#" class="text-white hover:bg-[#3193E8] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Gestión de datos</a>
+                        <a href="{{url_for('cargar_datos')}}" class="text-white hover:bg-[#3193E8] hover:bg-opacity-75 rounded-md px-3 py-2 text-md font-medium">Gestión de datos</a>
           
                       </div>
                     </div>
@@ -163,7 +163,7 @@
                                           <div class="inline-flex items-center gap-x-3">
       
                                               <div class="flex items-center gap-x-2">
-                                                  <img class="object-cover w-10 h-10 rounded-full" src="./../static/imagenes/perfil-falso.jpeg" alt="">
+                                                  <img class="object-cover w-10 h-10 rounded-full" src="./../static/img/perfil-falso.jpeg" alt="">
                                                   <div>
                                                       <h2 class="font-medium text-gray-800">Juan Pérez</h2>
                                                       <p class="text-sm font-normal text-gray-600">juan.perez@ejemplo.com</p>

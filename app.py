@@ -119,11 +119,10 @@ def cargar_planilla():
         df_reset2 = df2.set_index("fecha_ingreso")
         df_reset1.to_sql("datos_personales", con, if_exists = "append")
         df_reset2.to_sql("datos_institucionales", con, if_exists = "append")
-
-        return "Plantilla cargada exitosamente"
-
-    else:
+        
         return render_template("cargar_planilla.html")
+        
+    return render_template("cargar_planilla.html")
     
 
 # Definimos la ruta '/modif' que responde a los métodos GET y POST
