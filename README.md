@@ -1,6 +1,7 @@
 # Proyecto Red Penitenciaria
 
-Descripción del Proyecto: Intranet para funcionarios de penitenciarías
+Descripción del Proyecto: Red penitenciaria, una intranet cuyo enfoque toma al area de talentos humanos con la finalidad de mejorar y agilizar la gestion interna.
+
 
 ### Tecnologias: 
 
